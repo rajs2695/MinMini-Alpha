@@ -1,5 +1,7 @@
 import asyncio
 import importlib
+
+from heartbeat import heartbeat
 from pyrogram import Client, idle
 from RAUSHAN.helper import join
 from RAUSHAN.modules import ALL_MODULES
@@ -23,4 +25,5 @@ async def start_bot():
     await idle()
 
 loop = asyncio.get_event_loop()
+heartbeat()
 loop.run_until_complete(start_bot())
